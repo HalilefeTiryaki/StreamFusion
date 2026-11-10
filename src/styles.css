@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #0a0d14;
+  --color-panel: #10141d;
+  --color-panel-2: #171c28;
+  --color-line: #232a3a;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background:
+    radial-gradient(1200px 500px at 20% -10%, rgba(124, 58, 237, 0.12), transparent),
+    radial-gradient(1000px 500px at 90% -20%, rgba(14, 165, 233, 0.1), transparent),
+    var(--color-ink);
+  color: #e5e9f0;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+  overflow: hidden;
+}
+
+input,
+textarea {
+  user-select: text;
+}
+
+.input {
+  @apply w-full rounded-lg border border-line bg-panel-2 px-3 py-2 text-sm text-slate-100 outline-none transition-colors placeholder:text-slate-600;
+}
+
+.input:focus {
+  border-color: #4c6ef5;
+}
+
+.btn-ghost {
+  @apply rounded-lg border border-line bg-panel-2 px-3 py-2 text-xs font-medium text-slate-300 transition-colors hover:border-slate-500 hover:text-white;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a3245;
+  border-radius: 4px;
+}
